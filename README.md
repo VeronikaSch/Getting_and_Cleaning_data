@@ -2,7 +2,13 @@
 
 This is the README.md for the Programming Assignment of the Coursera Course "Getting and Cleaning Data"
 
-This repository hosts the R code "run_analysis.R", the output file "tidy.txt", a general "README.md" as well as a "Codebook.md", that describes the functionality of the "run_analysis.R" script and its generated output file.
+This repository hosts:  
+ * the R code "run_analysis.R", which actually performs the analysis of the data and writes the output file
+ * the output file "tidy.txt" itself with the averaged 80 variables observed for 180 Subject/activity pairs
+ * a general "README.md", which describes the purpose of this assignment, the used data set, the scripts   
+   and files created and also briefly the   contents stored in the repo.
+ * a "Codebook.md", that describes the functionality and variables of the "run_analysis.R" script and its   
+   generated output file.
 
 ## General description of the data set and requested tasks
 The used data set is: [Human Activity Recognition Using Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
@@ -20,7 +26,7 @@ For this assigment we should create a script that does the following:
 
 
 ## Scripts and files
-The script generated for this assignment is the "run_analysis.R" script. Here is a general description of the generated script, the output file and the complementary .md files.
+The script generated for this assignment is the "run_analysis.R" script. Here is a general description of the generated script, the output file and the complementary .md files. More information about script and variables can be found in the "Codebook.md" file.
 
 * **run_analysis.R** - This script performs the following steps:
        	
