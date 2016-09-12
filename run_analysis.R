@@ -2,7 +2,7 @@ library(reshape2)
 
 filename <- "getdata_dataset.zip"
 
-## Download and unzip the UCI HAR dataset:
+## Download, unzip and load the UCI HAR dataset:
 if (!file.exists(filename)){
         fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip "
         download.file(fileURL, filename, method="curl")
@@ -18,19 +18,20 @@ activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt")
 activity_labels[,2] <- as.character(activity_labels[,2])
 
 
-# Extracts feature names of all mean and standard deviation measurements
+## Extracting and transforming relevant variables
+# 1. Extracts feature names of all mean and standard deviation measurements
 features_selected <- grep(".*mean.*|.*std.*", features[,2])
 features_selected_names <- features[features_selected,2]
 
-# Transform selected feature names to proper column names
+# 2. Transform selected feature names to proper column names
 features_selected_names <- gsub('[-()]', '', features_selected_names)
 features_selected_names <- gsub('mean$', '_Mean', features_selected_names)
 features_selected_names <- gsub('std$', '_Std', features_selected_names)
 features_selected_names <- gsub('mean', '_Mean_', features_selected_names)
 features_selected_names <- gsub('std', '_Std_', features_selected_names)
 
-
-# Merging the data sets
+## Manipulating data set
+## Merging the data sets
 # 1. Load the training data set and select requested measurements
 subjects_train <- read.table("UCI HAR Dataset/train/subject_train.txt")
 activities_train <- read.table("UCI HAR Dataset/train/Y_train.txt")
@@ -50,7 +51,7 @@ selected_data <- rbind(train, test)
 colnames(selected_data) <- c("Subject", "Activity", features_selected_names)
 
 
-# Calculate the average of the selected columns for each Subject/Activity pair
+## Calculate the average of the selected columns for each Subject/Activity pair
 # 1. Transform subjects & activities to factors
 selected_data$Subject <- as.factor(selected_data$Subject)
 selected_data$Activity <- factor(selected_data$Activity, levels = activity_labels[,1], labels = activity_labels[,2])
