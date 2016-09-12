@@ -19,11 +19,11 @@ The code within run_analysis.R can be separated in a few sections, which was hig
 
 ### Manipulating data (Merging and transforming/averaging)
 * Merges the training and testing data set by first loading both data sets, extracting the needed columns in both data sets and merges both adapted sets with adding the descriptive column labels.
-* Calculates the average of the selected columns for each Subject/Activity pair and stores it in selected_data_average. It looks like this:
- `Subject Activity           tBodyAcc_Mean_X   tBodyAcc_Mean_Y      tBodyAcc_Mean_Z    `
- `1       WALKING            0.277330758736842 -0.0173838185273684  -0.111148103547368 ` 
- `1       WALKING_UPSTAIRS   0.255461689622641 -0.0239531492643396  -0.0973020020943396`
- `1       WALKING_DOWNSTAIRS 0.289188320408163 -0.00991850461020408 -0.107566190908163`
+* Calculates the average of the selected columns for each Subject/Activity pair and stores it in selected_data_average. It looks like this:  
+  `Subject Activity           tBodyAcc_Mean_X   tBodyAcc_Mean_Y      tBodyAcc_Mean_Z    `  
+  `1       WALKING            0.277330758736842 -0.0173838185273684  -0.111148103547368 `   
+  `1       WALKING_UPSTAIRS   0.255461689622641 -0.0239531492643396  -0.0973020020943396`  
+  `1       WALKING_DOWNSTAIRS 0.289188320408163 -0.00991850461020408 -0.107566190908163`  
 
 ### Writing final data to txt file
 * Writes the selected_data_average data to the outputfile "tidy.txt" in the current working directory.
