@@ -3,11 +3,11 @@
 This is the README.md for the Programming Assignment of the Coursera Course "Getting and Cleaning Data"
 
 This repository hosts:  
- * the R code "run_analysis.R", which actually performs the analysis of the data and writes the output file
- * the output file "tidy.txt" itself with the averaged 80 variables observed for 180 Subject/activity pairs
- * a general "README.md", which describes the purpose of this assignment, the used data set, the scripts   
+ * the R code **"run_analysis.R"**, which actually performs the analysis of the data and writes the output file
+ * the output file **"tidy.txt"** itself with the averaged 80 variables observed for 180 Subject/activity pairs
+ * a general **"README.md"**, which describes the purpose of this assignment, the used data set, the scripts   
    and files created and also briefly the   contents stored in the repo.
- * a "Codebook.md", that describes the functionality and variables of the "run_analysis.R" script and its   
+ * a **"Codebook.md"** file, that describes the functionality and variables of the "run_analysis.R" script and its   
    generated output file.
 
 ## General description of the data set and requested tasks
